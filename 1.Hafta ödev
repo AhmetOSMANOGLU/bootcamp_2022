@@ -1,0 +1,66 @@
+1.seçenek
+#include <stdio.h>
+
+int main()
+{
+float a,b;
+int secim;
+	printf("1 => TOPLAMA \n");
+	printf("2 => CIKARMA\n");
+	printf("3 => BOLME\n");
+	printf("4 => CARPMA\n");
+	
+	printf("Secim Yapiniz :");
+	scanf("%d",&secim);
+	
+	if(secim==1){
+		printf("iki sayi giriniz:");
+		scanf("%f %f",&a,&b);
+		printf("%f+%f=%.2f",a,b,a+b);
+	}
+	else if(secim==2){
+			printf("iki sayi giriniz:");
+		scanf("%f %f",&a,&b);
+		printf("%f-%f=%.2f",a,b,a-b);
+		
+	}
+	else if(secim==3){
+			printf("iki sayi giriniz:");
+		scanf("%f %f",&a,&b);
+		printf("%f/%f=%.2f",a,b,a/b);
+		
+	}
+	else if(secim==4){
+			printf("iki sayi giriniz:");
+		scanf("%f %f",&a,&b);
+		printf("%f*%f=%.2f",a,b,a*b);
+		
+	}
+	else{
+		printf("yanlis secim yaptiniz");
+	}
+}
+
+
+
+
+SEÇENEK 2
+#include <stdio.h>
+int main()
+{
+    int i, n, t1 = 0, t2 = 1, nextTerm;
+
+    printf("Terim sayısını girin: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Dizisi : ");
+
+    for (i = 1; i <= n; ++i)
+    {
+        printf("%d, ", t1);
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+    }
+    return 0;
+}
